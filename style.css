@@ -96,12 +96,15 @@ header {
     color: var(--accent);
 }
 
+section {
+    box-sizing: border-box;
+    padding:4em;
+}
+
 #intro {
     color:#fff;
-    background: var(--accent);
-    box-sizing: border-box;
     text-align: center;
-    padding:4em;
+    background: var(--accent);
 }
 
 #intro a {
@@ -115,8 +118,8 @@ header {
 }
 
 #intro a:hover {
-    color:var(--accent);
-    box-shadow:0px -17px #fff inset;
+    color: var(--accent);
+    box-shadow: 0px -17px #fff inset;
 }
 
 .sectionTitle {
@@ -126,15 +129,52 @@ header {
     margin-bottom: 1.5em;
 }
 
+#meetings .sectionTitle, #upcoming .sectionTitle {
+    color: var(--accent);
+}
+
+#meetings {
+    border-top: 3px solid var(--accent);
+}
+
 .sectionText {
     margin-top: 2.5em;
 }
 
+#meetings .sectionText, #upcoming .sectionText {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2vw;
+}
+
+.sectionText a {
+    color: var(--text);
+    box-shadow:0 -1px var(--text) inset;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.sectionText a:hover {
+    color: #fff;
+    box-shadow: 0px -24px var(--accent) inset;
+}
+
+#intro .line {
+    background:#fff;
+    margin:auto;
+}
+
+#meetings .line, #upcoming .line {
+    background: var(--accent);
+}
+
 .line {
     width:100px;
-    margin:auto;
     height:8px;
-    background:#fff;
 }
 
 #learnMore {
@@ -142,4 +182,19 @@ header {
     text-transform: uppercase;
     font-size: .7em;
 }
+
+.dates:first-child {
+    margin-top: 0em;
+}
+
+.meetingTime, .eventTime {
+    margin-top: 1em;
+}
+
+.meetingType, .eventType {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.2em;
+}
+
 
