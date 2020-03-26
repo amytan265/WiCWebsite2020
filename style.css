@@ -129,23 +129,8 @@ section {
     margin-bottom: 1.5em;
 }
 
-#meetings .sectionTitle, #upcoming .sectionTitle {
+#upcoming .sectionTitle {
     color: var(--accent);
-}
-
-#meetings {
-    border-top: 3px solid var(--accent);
-}
-
-.sectionText {
-    margin-top: 2.5em;
-}
-
-#meetings .sectionText, #upcoming .sectionText {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2vw;
 }
 
 .sectionText a {
@@ -163,13 +148,25 @@ section {
     box-shadow: 0px -24px var(--accent) inset;
 }
 
+#intro .sectionText {
+    margin-top: 2.5em;
+}
+
+#upcoming .sectionText {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 5vw;
+}
+
 #intro .line {
     background:#fff;
     margin:auto;
 }
 
-#meetings .line, #upcoming .line {
+#upcoming .line {
     background: var(--accent);
+    margin-bottom: 2em;
 }
 
 .line {
@@ -187,14 +184,22 @@ section {
     margin-top: 0em;
 }
 
-.meetingTime, .eventTime {
+.eventTime {
     margin-top: 1em;
 }
 
-.meetingType, .eventType {
+.eventType {
     font-weight: 700;
     color: var(--accent);
     font-size: 1.2em;
 }
 
+#highlights {
+    background: var(--accent);
+}
+
+#highlights .sectionTitle {
+    color:#fff;
+    text-align:center;
+}
 
