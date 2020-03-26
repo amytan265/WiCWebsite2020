@@ -5,7 +5,7 @@
   
 body {
     font-family: 'Lato', sans-serif;
-    background: #f9f9f9;
+    background: #fff;
     color: var(--text);
     margin:0;
     padding:0;
@@ -34,6 +34,7 @@ nav {
     grid-template-columns: 10vw auto;
     box-sizing: border-box;
     padding: 0 1.5em;
+    z-index: 2;
 }
 
 #links {
@@ -101,13 +102,17 @@ section {
     padding:4em;
 }
 
+#highlights {
+    padding: 4em 4em 5em 4em;
+}
+
 #intro {
     color:#fff;
     text-align: center;
     background: var(--accent);
 }
 
-#intro a {
+#intro a, .memberQuote a {
     color: #fff;
     box-shadow:0 -1px #fff inset;
     -webkit-transition: all 0.3s;
@@ -117,9 +122,16 @@ section {
     transition: all 0.3s;
 }
 
-#intro a:hover {
+#intro a:hover, .memberQuote a:hover {
     color: var(--accent);
+}
+
+#intro a:hover {
     box-shadow: 0px -17px #fff inset;
+}
+
+.memberQuote a:hover {
+    box-shadow: 0px -25px #fff inset;
 }
 
 .sectionTitle {
@@ -155,7 +167,7 @@ section {
 #upcoming .sectionText {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 47.5% 47.5%;
     grid-column-gap: 5vw;
 }
 
@@ -196,10 +208,57 @@ section {
 
 #highlights {
     background: var(--accent);
+    margin:auto;
+    color: #fff;
+    text-align:center;
+    box-sizing: border-box;
 }
 
 #highlights .sectionTitle {
     color:#fff;
-    text-align:center;
 }
+
+#memberHighlight {
+    width:60vw;
+    margin:auto;
+}
+
+.memberIcon {
+    text-align: center;
+}
+
+.icon {
+    margin: auto;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.memberName {
+    font-weight: 700;
+    margin: 1em 0 .5em 0;
+    font-size: 1.5em;
+}
+
+.memberQuote {
+    margin: 1em 0 1em 0;
+    font-style: italic;
+}
+
+.memberQuote::before {
+    content: '\201C';
+    position: absolute;
+    z-index: 1;
+    margin-top: .15em;
+    font-style: normal;
+    font-family: Georgia;
+    font-size: 5em;
+    opacity: .5;
+    font-weight: 900;
+}
+
+
+
+
+
+
 

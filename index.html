@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
 
@@ -128,12 +130,70 @@
 
         <section id="highlights">
             <div class="sectionTitle">Member Highlights</div>
+
+            <div id="memberHighlight">
+
+                <div class="member">
+                    <div class="memberIcon"> <img class="icon" src="img/icon.png" alt="member image"> </div> 
+                    <div class="memberInfo">
+                        <div class="memberName">Kiersten Reina</div>
+                        <div class="memberMajor">2nd Year Computer Science</div>
+                        <div class="memberQuote">My favorite WiC event is Afterhours. I met my current roommate and best friend at this event and I had so much fun doing the scavenger hunt and catapult challenge. I think that it is a great opportunity for potential female students to get to know the organization and see what wonderful things WiC offers. <a href="/">Read More</a></div>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="memberIcon"> <img class="icon" src="img/icon.png" alt="member image"> </div> 
+                    <div class="memberInfo">
+                        <div class="memberName">Shannon McHale</div>
+                        <div class="memberMajor">3rd Year Computing Security</div>
+                        <div class="memberQuote">The upperclassmen wanted me to succeed. Every time I felt unsure or overwhelmed they would pick me up and tell me I’m smart and remind me that I belong at RIT and in cybersecurity. They showed me how to network, brought me to conferences and introduced me to alumni. I have even had WiC members offer me their free time to make sure I get through my homework. <a href="/">Read More</a></div>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="memberIcon"> <img class="icon" src="img/icon.png" alt="member image"> </div> 
+                    <div class="memberInfo">
+                        <div class="memberName">Dominique Molee</div>
+                        <div class="memberMajor">3rd Year Computing and Information Sciences</div>
+                        <div class="memberQuote">WiCHacks has definitely deemed to be the most impactful event to me as a woman in STEM. As one of the organizers, I get to meet and interact with plenty of existing WiC members, as well as new faces and sponsors. I love spending the day seeing so many female students passionate about programming, it never fails to be an unforgettable experience. <a href="/">Read More</a></div>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="memberIcon"> <img class="icon" src="img/icon.png" alt="member image"> </div> 
+                    <div class="memberInfo">
+                        <div class="memberName">Laura Corrigan</div>
+                        <div class="memberMajor">Alumni, Computer Science</div>
+                        <div class="memberQuote">Our After Hours program is one of my favorite events and was a key factor in my decision to attend RIT. As an incoming student, it’s truly eye-opening to see how many fellow women in computing there are, both current and potential students. This event is where I was first exposed to WiC and met many people who are still my friends today. As a current student, I love volunteering at After Hours and being able to provide a similar experience to potential freshmen, reassuring them of the amazing community and incredible opportunities available here at RIT. <a href="/">Read More</a></div>
+                    </div>
+                </div>
+
+            <!--end of member highlight-->
+            </div>
+
         </section>
 
 
 
     <!--end of container-->
     </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('#memberHighlight').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+          });
+        });
+    </script>
 
 </body>
 </html>
