@@ -6,25 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="js/navi.js"></script>
 </head>
 <body>
 
 </body>
 
-<nav>
-    <div id="logo"><img id="logo" src="img/logo.png" alt="WiC logo"></div>
-    <div id="links">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Events</a>
-        <a href="">Committees</a>
-        <a href="">Blog</a>
-        <a href="">Sponser</a>
-        <a href="">Contact</a>
-    <!--end of links-->
-    </div>
-<!--end of nav-->
-</nav>
+<?php include 'nav.html';?>
 
 <div class="pgcontainer">
     <div class="pgsidebar">
@@ -32,7 +20,7 @@
         <div class="line"></div>
 
         <div id="sidebarlinks">
-            <a style="color:var(--accent); font-weight:700" href="/">Committee Heads</a>
+            <a style="color:var(--accent); font-weight:700" href="/">Committee Heads</a><br>
             <a href="/projects.html">Projects</a><br>
             <a href="/allies.html">Allies</a><br>
             <a href="/outreach.html">Outreach</a>
@@ -170,7 +158,7 @@
                 <div class="chname">Amy Tan, WebMaster</div>
                 <div class="chpronouns">She/Her/Hers</div>
                 <div class="chdescription">
-                    The Webmaster is responsible for updating and maintaining the Women in Computing website and the WiCHacks website.
+                    The Webmaster is responsible for updating and maintaining the Women in Computing website and the WiCHacks website. The WiC website was revamped in 2017 by Lauren DiDonato and in 2021 by Amy Tan.
                 </div>
             </div>
         <!--end of one ch-->

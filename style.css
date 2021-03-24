@@ -1,7 +1,17 @@
+/*******
+
+    WIC WEBSITE 2021
+    BY AMY TAN (WIC WEBMASTER 2018 - 2021) 
+
+
+*******/
+
 :root {
     --accent: #4D1E5B;
+    --accent2: #FDC000; 
     --text: #2b2b2b;
-  }
+}
+
   
 body {
     font-family: 'Lato', sans-serif;
@@ -21,25 +31,130 @@ a {
     color: var(--text);
 }
 
-nav {
+nav, #mobilenav {
     top: 0;
     position: fixed;
     width: 100vw;
     height: 80px;
-    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
-    background: #fff;
+    background: var(--accent);
     display: grid;
     line-height:80px;
     vertical-align: middle;
-    grid-template-columns: 10vw auto;
     box-sizing: border-box;
-    padding: 0 1.5em;
+    padding:0 40px;
     z-index: 2;
+    grid-template-columns: 10vw auto;
+}
+
+#mobilenav {
+    justify-content: space-between; 
+}
+
+.adddrop:hover {
+    cursor: pointer;
+    color:var(--accent2);
+}
+
+#mobileabt p, #mobileevt p, #mobilecmt p{
+    padding:0!important;
+    margin:0!important;
+    line-height:30px!important;
+}
+
+#mobilenav button {
+    padding:0;
+    background:transparent;
+    color:#fff;
+    border:0;
+    line-height:80px;
+    font-size:40px;
+    text-align:right;
+}
+
+#mobilenav button:focus {
+    outline:0;
+}
+
+#dropdownmenu {
+    border-top:1px solid #fff;
+	display:none;
+    box-sizing: border-box;
+    padding:20px 40px;
+    color:#fff;
+    font-size:.7em;
+    width:100vw;
+    background: var(--accent);
+    margin-left:-40px;
+}
+
+#dropdownmenu a {
+    color:#fff;
+}
+
+#mobileabt, #mobileevt, #mobilecmt {
+    display:none;
+}
+
+#dropdownmenu p {
+    margin:0;
+    line-height:50px;
+}
+
+#dropdownmenu a:hover {
+    color:var(--accent2);
+}
+
+.navlink {
+    display:inline-block;
+    margin-left:40px;
+}
+
+.navlink a {
+    color:#fff;
+}
+
+.navlink a:hover {
+    color: var(--accent2);
+}
+
+.navlink:hover .navhover {
+    display:block;
+}
+
+.navhover {
+    display:none;
+    position:absolute;
+    text-align:left;
+    background:#fff;
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    line-height:50px;
+    box-sizing: border-box;
+    padding:20px;
+    width:200px;
+}
+
+.navhover a {
+    font-size:.8em;;
+    display: block;
+    color:var(--text);
+}
+
+.navhover a:hover {
+    color:var(--accent);
+}
+
+.dropbtn {
+    color:#fff;
+    font-size: 60px;
+    text-align:right;
+    line-height:65px;
+    cursor:pointer;
+    vertical-align: middle;
 }
 
 #links {
-    text-align: right;
     font-size: .8em;
+    text-align:right;
     text-transform: uppercase;}
 
 #links a {
@@ -224,17 +339,12 @@ section {
     color:#fff;
 }
 
-#memberHighlight {
-    width:60vw;
-    margin:auto;
-}
-
 .memberIcon {
     text-align: center;
 }
 
 .icon {
-    margin: auto;
+    margin: 1.5em auto auto auto;
     width: 150px;
     border-radius: 50%;
 }
@@ -265,23 +375,12 @@ section {
 /** Page styles **/
 .pgcontainer {
     display:grid;
-    padding:4em 0;
+    grid-template-columns: 30% 70%;
+    padding:4em 0em;
     width:80%;
+    box-sizing:border-box;
     margin:85px auto 0 auto;
-    grid-template-columns:250px 100px auto;
-    gird-template-rows: auto;
-    grid-template-areas: 
-        "pagesidebar . pagecontent";
-}
-
-.pgsidebar {
-    width:250px;
-    grid-area: pagesidebar;
-    position:fixed;
-}
-
-.pgcontent {
-    grid-area: pagecontent;
+    grid-template-rows: auto ;
 }
 
 .sidebarlinks a{
@@ -332,6 +431,113 @@ section {
     color:var(--accent);
     padding-top:.5em;
 }
+
+@media only screen and (max-width: 870px) {
+    nav {
+        display:none;
+    }
+
+    #mobilenav {
+        display:gird;
+    }
+}
+
+@media only screen and (min-width: 871px) {
+    #mobilenav {
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .pgcontainer {
+        grid-template-columns: 100%;
+    }
+
+    .pgsidebar {
+        padding-bottom: 4em;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #upcoming .sectionText {
+        box-sizing: border-box;
+        display: grid;
+        font-size:18px;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .newEvents {
+        margin-bottom:3em;
+    }
+
+    .newEvents:last-child {
+        margin-bottom:0;
+    }
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    width:60vw;
+    margin:auto;
+    position:relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  margin-right:-3em;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    margin-left:-3em;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: var(--accent2);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
 
 
 
