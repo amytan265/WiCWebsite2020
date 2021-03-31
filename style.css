@@ -14,12 +14,12 @@
 
   
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #fff;
     color: var(--text);
     margin:0;
     padding:0;
-    font-size:1.4em;
+    font-size:1.2em;
     line-height:180%;
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing:antialiased;
@@ -63,6 +63,7 @@ p .pgbutton {
     color: #fff;
     padding:10px 25px;
     border-radius:6px;
+    text-decoration: none;
 }
 
 .imgShowcase {
@@ -382,6 +383,12 @@ section {
     height:8px;
 }
 
+.line.chLine {
+    width:140px;
+    background: var(--accent);
+    margin-top:1em;
+}
+
 #learnMore {
     font-weight: 700;
     text-transform: uppercase;
@@ -448,6 +455,69 @@ section {
 }
 
 /** Page styles **/
+
+.pgheading.chHeading {
+    width:80%;
+    box-sizing:border-box;
+    margin:85px auto 0 auto;
+    padding-top:4em;
+}
+
+#committeeWrapper {
+    width:80%;
+    box-sizing:border-box;
+    margin:0 auto;
+    display:grid;
+    height:auto;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between; 
+    grid-template-rows: auto;
+    padding-top:3em;
+    row-gap: 3em;
+    font-size:.8em;
+    padding-bottom:4em;
+}
+
+.chname, .chposition {
+    font-weight:600;
+}
+
+.chposition {
+    color: var(--accent);
+}
+
+.chline {
+    width:100%;
+    background:#bbb;
+    height:1px;
+    margin:.5em 0 1.5em 0;
+}
+
+.chimg img {
+    width:100%;
+}
+
+.chdescript, .chmeeting {
+    font-size:.9em;
+    margin-top:1.5em;
+}
+
+.chmeeting {
+    color: var(--accent);
+}
+
+@media only screen and (max-width: 1330px) {
+    #committeeWrapper {
+        grid-template-columns: 45% 45%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #committeeWrapper {
+        grid-template-columns: 100%;
+    }
+}
+
 .pgcontainer {
     display:grid;
     grid-template-columns: 30% 70%;
@@ -461,50 +531,6 @@ section {
 .sidebarlinks a{
     display:block;
     color: var(--accent);
-}
-
-.chhead {
-    font-size:18px;
-    margin-top:4em;
-    display:grid;
-    grid-template-columns:150px 50px auto;
-    gird-template-rows: auto;
-    grid-template-areas: 
-        "chimg . chinfo";
-}
-
-.chhead:first-of-type {
-    margin-top:0;
-}
-
-.chimg {
-    grid-area:chimg;
-}
-
-.chimg img {
-    width:150px;
-    margin:0;
-    padding:0;
-}
-
-.chinfo {
-    grid-area:chinfo;
-    margin-top:-.6em;
-}
-
-.chname, .chpronouns {
-    color:var(--accent);
-    font-size:20px;
-    font-weight:700;
-}
-
-.chpronouns {
-    padding: .5em 0;
-}
-
-.chmeeting {
-    color:var(--accent);
-    padding-top:.5em;
 }
 
 @media only screen and (max-width: 870px) {
@@ -543,6 +569,8 @@ section {
     .afterhourssidebar {
         margin-bottom:2em;
     }
+
+
 }
 
 @media only screen and (max-width: 1300px) {
@@ -606,7 +634,6 @@ section {
   color: var(--accent2);
 }
 
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -621,6 +648,47 @@ section {
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+.projectwrap {
+    font-size:18px;
+    margin-top:4em;
+    display:grid;
+    grid-template-columns:150px 50px auto;
+    gird-template-rows: auto;
+    grid-template-areas: 
+        "chimg . chinfo";
+}
+
+.projectwrap:first-of-type {
+    margin-top:0;
+}
+
+.projectimg {
+    grid-area:chimg;
+}
+
+.projectimg img {
+    width:150px;
+    margin:0;
+    padding:0;
+}
+
+.projectinfo {
+    grid-area:chinfo;
+    margin-top:-.6em;
+}
+
+
+@media only screen and (max-width: 630px) {
+    .projectimg img {
+        width:100px;
+    }
+
+    .projectwrap {
+        grid-template-columns:100px 50px auto;
+
+    }
 }
 
 
