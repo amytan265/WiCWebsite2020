@@ -463,6 +463,18 @@ section {
     padding-top:4em;
 }
 
+/** wrapper used for no sidebar **/
+#fullpgWrapper {
+    width:80%;
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:3em 0 4em 0;
+}
+
+#fullpgWrapper a {
+    text-decoration: underline;
+}
+
 #committeeWrapper {
     width:80%;
     box-sizing:border-box;
