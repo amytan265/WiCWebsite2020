@@ -99,12 +99,12 @@ p .pgbutton {
     position:fixed;
     z-index:5;
     box-sizing: border-box;
-    padding:0 40px;
+    padding:10px 40px 0px 40px;
     background:#fff;
 }
 
 .ritlogo img {
-    width:300px;
+    width:250px;
 }
 
 nav, #mobilenav {
@@ -469,6 +469,85 @@ section {
     box-sizing:border-box;
     margin:0 auto;
     padding:3em 0 4em 0;
+}
+
+footer {
+    width:100%;
+    display:grid;
+    margin:auto;
+    line-height:80px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding:0 40px;
+    background:#eee;
+    grid-template-columns:50% 50%;
+    grid-template-rows: auto;
+}
+
+.ritinfo {
+    background: var(--accent);
+    color:#fff;
+    padding:20px 40px;
+    font-size:13px;
+    line-height:160%;
+}
+
+@media only screen and (max-width: 850px) {
+    .ritinfo {
+        grid-template-columns:auto;
+    }
+
+    .ritadd {
+        margin-top:1em;
+        text-align:left!important;
+    }
+}
+
+.ritinfo a {
+    color:#fff;
+    text-decoration: underline;
+}
+
+.ritinfo a:hover {
+    color: var(--accent2);
+}
+
+.ritadd {
+    text-align:right;
+}
+
+.socialmedia a {
+    margin-left:1em;
+    color:#666;
+}
+
+.socialmedia a:hover {
+    color: var(--accent);
+}
+
+.socialmedia a:first-child {
+    margin-left: 0;
+}
+
+.emailbttn {
+    text-align:right;
+    
+}
+
+.emailbttn a {
+    color:#fff;
+    padding:.5em 1.5em;
+    font-size:15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.emailbttn a:hover {
+    color: var(--accent2);
+}
+
+#subbttn {
+    background: var(--accent);
 }
 
 #fullpgWrapper a {
